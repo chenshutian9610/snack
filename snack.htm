@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        snack{
+            color: blue;
+            position: absolute;
+            left:100px;
+        }
+        food{
+            color:black;
+            position:absolute;
+        }
+        table{
+            position: absolute;
+            left:30px;
+            top:40px;
+        }
+    </style>
+</head>
+
+<body onkeydown="input(event)">
+    <table border="4" width="420px" height="320px" cellspacing="0" style="border-collapse: collapse;">
+        <tr>
+            <td>
+                <snack class="snack">*</snack>
+                <snack class="snack">*</snack>
+                <snack class="snack">*</snack>
+                <snack class="snack">*</snack>
+                <snack class="snack">*</snack>
+                <div id='new'></div>
+                <food id="food">*</food>
+            </td>
+        </tr>
+    </table>
+    &emsp;&emsp;&emsp;&emsp;速度：
+    <select id="speed" onchange="this.blur()">
+        <option value="150">略快</option>
+        <option value="100">快</option>
+        <option value="50">死的快</option>
+    </select>&emsp;&emsp;
+    <input id="on" type="button" value="start" onclick="on()">
+    <input id="stop" type="button" value="stop" onclick="stop()">
+    <input type="button" value="reset" onclick="reset()">
+    &emsp;<message id="p"></message>
+    <script src='snack.js'></script>
+</body>
+
+</html>
